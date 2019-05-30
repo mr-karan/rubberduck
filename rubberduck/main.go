@@ -1,11 +1,11 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"log"
 	"net/http"
 	"os"
-	"encoding/json"
 )
 
 var (
@@ -16,9 +16,9 @@ var (
 
 // apiResponse is used to send uniform response structure.
 type apiResponse struct {
-	Status    string      `json:"status"`
-	Message   string      `json:"message,omitempty"`
-	Data      interface{} `json:"data"`
+	Status  string      `json:"status"`
+	Message string      `json:"message,omitempty"`
+	Data    interface{} `json:"data"`
 }
 
 // sendEnvelope is used to send success response based on format defined in apiResponse
