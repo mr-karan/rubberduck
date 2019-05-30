@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+  hello:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: karan/hello:1.0.0
+    ports:
+      - "7000:8080"

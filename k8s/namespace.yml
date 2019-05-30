@@ -1,0 +1,5 @@
+# TASK: Creating a demo namespace
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: minikube-demo

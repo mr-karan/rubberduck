@@ -1,0 +1,26 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-world
+  namespace: minikube-demo
+  labels:
+    app: hello
+    env: staging
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hello
+  template:
+    metadata:
+      labels:
+        app: hello
+        tier: api
+        env: staging
+    spec:
+      containers:
+      - name: calert
+        image: karan/hello:1.0.0
+        ports:
+        - containerPort: 8080
