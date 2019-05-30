@@ -2,25 +2,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-world
+  name: rubberduck-world
   namespace: minikube-demo
   labels:
-    app: hello
+    app: rubberduck
     env: staging
 spec:
-  replicas: 3
+  replicas: 10
   selector:
     matchLabels:
-      app: hello
+      app: rubberduck
   template:
     metadata:
       labels:
-        app: hello
+        app: rubberduck
         tier: api
         env: staging
     spec:
       containers:
       - name: calert
-        image: karan/hello:1.0.0
+        image: mrkaran/rubberduck:1.0.1
         ports:
         - containerPort: 8080

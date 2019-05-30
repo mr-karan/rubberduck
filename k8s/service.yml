@@ -2,14 +2,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: hello-service
+  name: rubberduck-service
   namespace: minikube-demo
   labels:
-    app: expose-hello-app
+    app: expose-rubberduck-app
 spec:
   ports:
   - protocol: TCP
-    port: 6000
+    port: 8080
   selector:
-    app: hello
+    app: rubberduck
   type: NodePort
