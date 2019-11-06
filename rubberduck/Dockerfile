@@ -11,6 +11,7 @@ RUN set -ex \
     iftop \
     drill \
     strace \
+    netcat-openbsd \
     curl \
     iperf \
     nmap \
