@@ -7,7 +7,7 @@
 Rubberduck is a lightweight container (Alpine based) which installs a set of utilities which are handy while debugging issues in a container environment.
 It also ships with an small `Golang` binary which runs a bare-bones API server.
 
-## Quick Deployment
+## ⚡️⚡️ Quick Deployment
 
 `kubectl run -i --tty --rm debug --image=mrkaran/rubberduck:latest --restart=Never -- sh`
 
