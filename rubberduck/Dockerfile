@@ -25,4 +25,5 @@ RUN set -ex \
     bind-tools
 WORKDIR /rubberduck/
 COPY --from=backend-build /rubberduck/rubberduck ./
+EXPOSE 8080
 CMD [ "bash", "-c", "./rubberduck" ]
