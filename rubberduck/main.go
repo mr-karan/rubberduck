@@ -56,7 +56,7 @@ func main() {
 	})
 	// Healthcheck Endpoint
 	http.HandleFunc("/ping", func(w http.ResponseWriter, r *http.Request) {
-		sendEnvelope(w, 200, fmt.Sprintf("PONG! app version: %s", version), nil)
+		sendEnvelope(w, 200, fmt.Sprintf("PONG! app version: %s env: %s", version, os.Getenv("RUBBERDUCK_COLOR")), nil)
 	})
 	// Start a web server
 	sysLog.Printf("Listening on :8080")
